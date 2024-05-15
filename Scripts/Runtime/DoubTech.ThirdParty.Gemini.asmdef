@@ -1,0 +1,16 @@
+{
+    "name": "DoubTech.ThirdParty.Gemini",
+    "rootNamespace": "DoubTech.ThirdParty.Gemini",
+    "references": [
+        "GUID:233153e89954a6244b31d5555462d524"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

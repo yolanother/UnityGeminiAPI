@@ -1,0 +1,14 @@
+{
+  "name": "com.doubtech.unity.thirdparty.gemini",
+  "displayName": "DoubTech - 3rd Party - Gemini",
+  "version": "0.0.1",
+  "unity": "2021.3",
+  "description": "",
+  "keywords": [],
+  "category": "Scripts",
+  "type": "tool",
+  "author": {
+    "name": "",
+    "url": ""
+  }
+}
