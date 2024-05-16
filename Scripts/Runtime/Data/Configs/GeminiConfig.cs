@@ -27,6 +27,7 @@ namespace DoubTech.Gemini.OpenAI
         [SerializeField] public string[] modelDisplayNames;
 
         public string ApiURL => $"{host}/{endpointVersion}";
+        public override string[] Models => models;
         public override string GetUrl(params string[] path) => string.Join("/", ApiURL, string.Join("/", path));
 
         public override async Task RefreshModels()
