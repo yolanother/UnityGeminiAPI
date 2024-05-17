@@ -21,24 +21,20 @@ namespace DoubTech.ThirdParty.Gemini
             Model + ":generateContent"
         };
 
-        protected override Response OnHandleStreamedResponse(string blob)
+        protected override Response OnHandleStreamedResponse(string blob, Response currentResponse)
         {
             Debug.Log(blob);
-            var response = JsonConvert.DeserializeObject<GeminiGenerateContentResponse>(blob);
-            return new Response
-            {
-                currentResponse = response.Candidates.First().Content.Parts.First().Text
-            };
+            var response = currentResponse.ParseResponse<GeminiGenerateContentResponse>(blob);
+            currentResponse.response += response.Candidates.First().Content.Parts.First().Text;
+            return currentResponse;
         }
 
-        protected override Response OnHandleResponse(string blob)
+        protected override Response OnHandleResponse(string blob, Response currentResponse)
         {
             Debug.Log(blob);
-            var response = JsonConvert.DeserializeObject<GeminiGenerateContentResponse>(blob);
-            return new Response
-            {
-                currentResponse = response.Candidates.First().Content.Parts.First().Text
-            };
+            var response = currentResponse.ParseResponse<GeminiGenerateContentResponse>(blob);
+            currentResponse.response += response.Candidates.First().Content.Parts.First().Text;
+            return currentResponse;
         }
     }
 }
