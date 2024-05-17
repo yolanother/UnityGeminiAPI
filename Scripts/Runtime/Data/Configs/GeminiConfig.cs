@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace DoubTech.Gemini.OpenAI
 {
-    [CreateAssetMenu(fileName = "GeminiConfig", menuName = "DoubTech/Third Party/Gemini/Config", order = 0)]
+    [CreateAssetMenu(fileName = "GeminiConfig", menuName = "DoubTech/AI APIs/Config/Gemini", order = 0)]
     public class GeminiConfig : ApiConfig, IQueryParameterAuth
     {
         const string DEFAULT_HOST = "https://generativelanguage.googleapis.com";
